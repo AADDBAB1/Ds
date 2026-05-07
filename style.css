@@ -1,0 +1,110 @@
+body{
+    margin:0;
+    background:#bfbfbf;
+    font-family:Arial;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.player{
+    display:flex;
+    gap:15px;
+}
+
+/* MENUS */
+.left-panel,
+.right-panel{
+    width:200px;
+    background:#d9d9d9;
+    padding:15px;
+    border-radius:15px;
+}
+
+/* CENTRO */
+.center{
+    width:800px;
+}
+
+/* VIDEO */
+.top-screen{
+    position:relative;
+    background:black;
+    height:420px;
+    overflow:hidden;
+    border-radius:10px;
+}
+
+video{
+    width:100%;
+    height:100%;
+}
+
+/* LISTA */
+.bottom-screen{
+    background:#222;
+    padding:10px;
+    height:300px;
+    overflow:auto;
+    color:white;
+}
+
+#videoList div{
+    padding:8px;
+    background:#333;
+    margin:5px 0;
+    cursor:pointer;
+}
+
+/* BOTÕES */
+button{
+    width:100%;
+    margin:5px 0;
+    padding:10px;
+    cursor:pointer;
+    border:none;
+    border-radius:8px;
+}
+
+/* FULLSCREEN UI */
+.fullscreen-ui{
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    display:none;
+    flex-direction:column;
+    background:rgba(0,0,0,0.75);
+    padding:10px;
+}
+
+.fs-bars{
+    display:flex;
+    gap:10px;
+    margin-bottom:10px;
+}
+
+.fs-bars input{
+    width:50%;
+}
+
+.fs-buttons{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+}
+
+.fs-buttons button{
+    width:auto;
+    padding:8px 12px;
+}
+
+/* FULLSCREEN ACTIVE */
+#videoContainer:fullscreen .fullscreen-ui{
+    display:flex;
+}
+
+#videoContainer:-webkit-full-screen .fullscreen-ui{
+    display:flex;
+}
